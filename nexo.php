@@ -1,18 +1,37 @@
 <?php
 
-require_once"index.php";
+//require_once"index.php";
 
             //header('http/1.0 500 ');
-var_dump($_POST);
-// $queHago = isset($_POST['queHago']) ? $_POST['queHago'] : NULL;
+//var_dump($_POST);
+$queHago = isset($_POST['queHago']) ? $_POST['queHago'] : NULL;
 
-// switch ($queHago) {
+switch ($queHago) {
 
-//     case "Suma":
+    case "Suma":
 
-//     	echo "5";//$_POST['num1'] + $_POST['num2'];
+    	echo $_POST['num1'] + $_POST['num2'];
 
-//     	break;
-// }
+    	break;
+
+    case "Resta":
+
+    	echo $_POST['num1'] - $_POST['num2'];
+
+    	break;
+
+    case "Multiplicacion":
+
+    	echo $_POST['num1'] * $_POST['num2'];
+
+    	break;
+
+    case "Divicion":
+
+    	if ($_POST['num2'] != 0) 
+    	echo $_POST['num1'] / $_POST['num2'];
+
+    	break;
+}
 
 ?>
